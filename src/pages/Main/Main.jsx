@@ -5,6 +5,7 @@ const Main = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+console.log(products);
 
   useEffect(() => {
     // Backenddan mahsulotlarni olish
