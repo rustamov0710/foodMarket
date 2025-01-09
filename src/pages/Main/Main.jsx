@@ -41,7 +41,7 @@ console.log(products);
       <div className="container mx-auto px-4">
         <h1 className="text-2xl font-bold text-center mb-8">Our Products</h1>
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <ul className="flex w-[1000px] flex-wrap gap-6 justify-center mx-auto">
           {products.map((product) => (
             <Card
             key={product.id}
@@ -50,7 +50,7 @@ console.log(products);
             amount={product.amount}
             />
           ))}
-        </div>
+        </ul>
         {/* View All Button */}
         <div className="text-center mt-8">
           <button className="px-6 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition">

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Header from "../../components/Header";
 
 function Categories() {
   const categories = [
@@ -10,12 +11,14 @@ function Categories() {
   ];
 
   return (
-    <div style={{ padding: "20px" }}>
+<>
+<Header/>
+      <div style={{ padding: "20px" }}>
       <h1>Kategoriyalar</h1>
       <ul style={{ listStyle: "none", padding: 0 }}>
         {categories.map((category) => (
           <li key={category.path} style={{ marginBottom: "10px" }}>
-            <Link to={`/category/${category.path}`} style={{ textDecoration: "none", color: "blue" }}>
+            <Link to={`/categories/${category.path}`} style={{ textDecoration: "none", color: "blue" }}>
               <button style={{ padding: "10px 20px", fontSize: "16px" }}>
                 {category.name}
               </button>
@@ -24,6 +27,7 @@ function Categories() {
         ))}
       </ul>
     </div>
+</>
   );
 }
 

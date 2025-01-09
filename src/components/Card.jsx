@@ -2,12 +2,12 @@ import React from 'react'
 
 const Card = () => {
     return (
-      <div className="w-60 bg-white rounded-lg shadow-md p-4 flex flex-col items-center">
+      <li className="w-[300px] bg-white rounded-lg shadow-md p-4 flex flex-col items-center">
         {/* Product Image */}
         <img
           src="https://via.placeholder.com/150"
           alt="Product"
-          className="w-32 h-32 object-cover rounded-lg mb-4"
+          className="w-[300px] h-32 object-cover rounded-lg mb-4"
         />
   
         {/* Product Name */}
@@ -35,7 +35,7 @@ const Card = () => {
             />
           </svg>
         </button>
-      </div>
+      </li>
     );
   };
   

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Header from '../components/Header';
 
 const Products = () => {
     const [products, setProducts] = useState(null); // Mahsulotlar holati
@@ -23,6 +24,8 @@ const Products = () => {
 
     // Mahsulotlar ro'yxatini chiqarish
     return (
+<>
+<Header/>
         <div className="App">
             <h1>Food Market Products</h1>
             <div className="product-list">
@@ -35,6 +38,7 @@ const Products = () => {
                 ))}
             </div>
         </div>
+</>
     );
 };
 

@@ -5,6 +5,7 @@ import About from "./pages/About";
 import './App.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Categories from "./pages/Categories/Categories";
+import CategoryProducts from "./components/CategoryItem/CategoryItem";
 function App() {
 
   const router = createBrowserRouter([
@@ -24,6 +25,10 @@ function App() {
       path: '/categories',
       element: <Categories />,
     },
+    {
+      path:'/categories/:categoryName',
+      element:<CategoryProducts/>
+    }
   ]);
 
   return <RouterProvider router={router} />;
