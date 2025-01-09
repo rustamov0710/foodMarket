@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Card from "../../components/Card";
+import { Link } from "react-router-dom";
 
 const Main = () => {
   const [products, setProducts] = useState([]);
@@ -53,9 +54,11 @@ console.log(products);
         </ul>
         {/* View All Button */}
         <div className="text-center mt-8">
-          <button className="px-6 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition">
+         <Link to='/products'>
+         <button className="px-6 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition">
             View All Products
           </button>
+         </Link>
         </div>
       </div>
     </div>

@@ -23,7 +23,7 @@ function CategoryProducts() {
   const categoryProducts = filterByCategory(categoryName);
 
   return (
-    <div style={{ padding: "20px" }}>
+    <li style={{ padding: "20px" }}>
       <h1>{categoryName.replace("_", " ").toUpperCase()}</h1>
       {categoryProducts.length > 0 ? (
         <ul>
@@ -44,7 +44,7 @@ function CategoryProducts() {
           Orqaga qaytish
         </button>
       </Link>
-    </div>
+    </li>
   );
 }
 

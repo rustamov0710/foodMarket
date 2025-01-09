@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = () => {
+const Card = ({name, price, amount, category}) => {
     return (
       <li className="w-[300px] bg-white rounded-lg shadow-md p-4 flex flex-col items-center">
         {/* Product Image */}
@@ -12,11 +12,11 @@ const Card = () => {
   
         {/* Product Name */}
         <h2 className="text-lg font-semibold text-gray-800 mb-2">
-          Bell Pepper Red
+          {name}
         </h2>
   
         {/* Product Price */}
-        <p className="text-gray-600 text-sm mb-4">₹80 / kg</p>
+        <p className="text-gray-600 text-sm mb-4">{price} so`m / {`${amount}${category == 'ichimliklar' ? 'l' : 'kg'}`}</p>
   
         {/* Lock Icon Button */}
         <button className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">

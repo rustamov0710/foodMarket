@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Header from '../components/Header';
+import Card from '../components/Card';
+import Footer from '../components/Footer';
 
 const Products = () => {
     const [products, setProducts] = useState(null); // Mahsulotlar holati
@@ -27,17 +29,20 @@ const Products = () => {
 <>
 <Header/>
         <div className="App">
-            <h1>Food Market Products</h1>
-            <div className="product-list">
+        <h1 className="text-2xl font-bold text-center mb-8 mt-6">Our Products</h1>
+            <ul className="flex w-[1500px] flex-wrap gap-6 justify-center mx-auto mb-6">
                 {products?.map(product => (
-                    <div className="product-card" key={product.id}>
-                        <img src={product.image} alt={product.name} />
-                        <h3>{product.name}</h3>
-                        <p className="price">{product.price} so'm</p>
-                    </div>
+                    <Card
+                    key={product.id}
+                    name={product.name}
+                    price={product.price}
+                    amount={product.amount}
+                    category={product.category}
+                    />
                 ))}
-            </div>
+            </ul>
         </div>
+        <Footer/>
 </>
     );
 };

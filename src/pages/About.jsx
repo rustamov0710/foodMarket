@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const About = () => {
   return (
@@ -11,6 +12,7 @@ const About = () => {
         Food Market is dedicated to bringing fresh, high-quality groceries directly to your table.
       </p>
     </div>
+    <Footer/>
 </>
   );
 };
